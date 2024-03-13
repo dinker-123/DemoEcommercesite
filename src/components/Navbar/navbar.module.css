@@ -1,0 +1,225 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(174,162,238);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0.5rem 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif";
+  color: var(--dark-color);
+  text-decoration: none;
+}
+
+.logo img {
+  width: 40px;
+  margin-right: 0.5rem;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  display: inline-block;
+}
+
+.link {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: var(--dark-color);
+  text-decoration: none;
+}
+
+.link:hover {
+  color: var(--primary-color);
+}
+
+.link.active {
+  color: var(--primary-color);
+}
+
+.link.disabled {
+  color: var(--secondary-color);
+  pointer-events: none;
+}
+
+.cta {
+  display: flex;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: 1px,white;
+  color: white;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: var(--primary-color);
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  margin-left: 0.5rem;
+  border: white;
+}
+
+.search input {
+  display: block;
+  width: 200px;
+  padding: 0.5rem;
+  border: 1px solid var(--secondary-color);
+  border-radius: 0.25rem;
+}
+
+.search button {
+  display: block;
+  padding: 0.2rem;
+  border-radius: 0.25rem;
+  background-color: var(--success-color);
+  color: white;
+  margin-right:15px;
+  margin-left: 15px;
+}
+
+.toggle {
+  display: none;
+}
+
+.icon {
+  display: inline-block;
+  width: 30px;
+  height: 3px;
+  background-color: var(--dark-color);
+  position: relative;
+}
+
+.icon::before,
+.icon::after {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 3px;
+  background-color: var(--dark-color);
+  position: absolute;
+  left: 0;
+  transition: all 0.3s;
+}
+
+.icon::before {
+  top: -10px;
+}
+
+.icon::after {
+  top: 10px;
+}
+
+
+@media (min-width: var(--lg-breakpoint)) {
+  .menu {
+    display: flex;
+  }
+
+  .cta {
+    display: flex;
+  }
+
+  .toggle {
+    display: none;
+  }
+}
+
+/* Toggle animation for the nav icon */
+.toggle:checked + .container .icon {
+  background: transparent;
+}
+
+.toggle:checked + .container .icon::before {
+  transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.toggle:checked + .container .icon::after {
+  transform: rotate(45deg) translate(-5px, -5px);
+}
+
+/* Collapse and expand animation for the nav menu and cta */
+.toggle:checked + .container .menu,
+.toggle:checked + .container .cta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  animation: slide-down 0.3s ease-in-out;
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Mobile styles for the nav elements */
+@media (max-width: var(--sm-breakpoint)) {
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .logo img {
+    width: 30px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .cta {
+    display: none;
+  }
+
+  .toggle {
+    display: block;
+  }
+}
+
+.shopping{
+  cursor: pointer;
+  width: 25px;
+ color:white;
+  border : none;
+  
+} 
+
+.shopping:hover{
+  color:rgb(0, 0, 0)
+}

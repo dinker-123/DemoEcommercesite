@@ -1,0 +1,14 @@
+.footer {
+    /* Set the footer background color */
+    background-color: rgb(174,162,238);
+    width: 100%;
+    height: 150px;
+    /* Set the footer border style, width, and color */
+
+  
+    /* Center the footer text */
+    text-align: center;
+    margin-top: 5px;
+    padding-top: 10px;
+  }
+  

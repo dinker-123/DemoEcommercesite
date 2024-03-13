@@ -1,0 +1,53 @@
+.register {
+    margin: auto;
+    margin-top: 10%;
+    width: 400px;
+    height: 400px;
+    padding-top:15px ;
+    padding-left: 10px;
+    text-align: center;
+    border:1px solid #e9ecef; 
+    border-radius: 10px; 
+    background-color: white;
+    box-shadow: 2px -1px 10px rgb(217, 210, 210);
+    display:flex;
+    flex-wrap: wrap;
+
+  }
+
+* {
+    box-sizing: border-box;
+  }
+
+
+  /* Style input elements */
+  input[type=text], input[type=password] {
+    width: 70%;
+    padding: 15px;
+    margin: 20px;
+    border:1px solid #e9ecef; 
+    outline: none;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+  }
+
+  /* Style button element */
+  /* button {
+    width: 70%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+    background-color: #1103b1;
+    color: white;
+    font-size: 18px;
+} */
+
+/* Change button color when focused */
+/* button:focus {
+   background-color:#1103b1; 
+} */
+
+.p{
+  margin-top: 45px;
+} 
